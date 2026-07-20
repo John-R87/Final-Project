@@ -9,14 +9,31 @@
     <script src="https://kit.fontawesome.com/04e00b3a8d.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header class="navbar">Movie Finder</header>
-    <div class="logo">
-        <i class="fa-solid fa-video" style="color: rgb(116, 192, 252);"></i>
+    <section id="landing">
+        <nav>
+   <div class="nav__row">
+    <div class="nav__logo--title">Movie Finder</div>
+    <div class="nav__logo">
+    <div class="nav__logo--img">
+        <i class="fa-solid fa-video"></i></div>
     </div>
-    <div class="links">
-        <a href="home" class="link">Home</a>
-        <a href="findMovie" class="link">Find Your Moive</a>
-        <a href="contact" class="link">Contact</a>
     </div>
+    <div class="nav__links">
+        <a href="#" class="link">Home</a>
+        
+        <a href="#" class="link">Contact</a>
+    </div>
+
+    </nav>
+    </section>
+    
+    <main>
+        <form action="/search" method="GET" class="search-form">
+  <label for="site-search" class="visually-hidden">Search the site:</label>
+  <input type="search" id="site-search" name="q" placeholder="Search here..." required>
+  <button type="submit">Search</button>
+</form>
+    </main>
+
 </body>
 </html>
