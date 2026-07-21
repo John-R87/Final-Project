@@ -19,8 +19,7 @@
     </div>
     </div>
     <div class="nav__links">
-        <a href="#" class="link">Home</a>
-        
+        <a href="#" class="link">Refresh</a>
         <a href="#" class="link">Contact</a>
     </div>
 
@@ -33,7 +32,20 @@
   <input type="search" id="site-search" name="q" placeholder="Search here..." required>
   <button type="submit">Search</button>
 </form>
+    
+     <select id="filter" onchange="filterMovies(event)">
+        <option value disabled selected>sort</option>
+        <option value="A-Z">A to Z</option>
+        <option value="Z-A">Z to A</option>
+        <option value="RATING">Rating</option>
+     </select>
     </main>
-
+<footer>
+    <div class="footer__row">
+        <div class="footer__column">
+            <a href="#" class="footer__column--link">Back to the top</a>
+        </div>
+    </div>
+</footer>
 </body>
 </html>

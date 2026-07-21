@@ -47,3 +47,26 @@ color: rgb(236, 21, 21);
   overflow: hidden;
   padding: 2px 8px;
 }
+
+
+.footer__column--link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(236, 21, 21);
+    font-size: 20px;
+    padding: 20px 0;
+    flex-direction: column;
+    margin-top: 80px;
+}
+
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer__column {
+    flex: 1;
+}
