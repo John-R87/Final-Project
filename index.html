@@ -25,37 +25,35 @@
     <div class="container">
     <div class="row">
       <div class="movie-list">
-        <div class="movie">
-          <div class="movie-card">
-            <div class="movie-card__container">
-              <h3>Movie Title</h4>
-                <p><b>Film:</b> email@email.com</p>
-                <p><b>Phone:</b> 0000000000</p>
-                <p><b>Website:</b> <a href="https://website.website" target="_blank">website.website</a></p>
-            </div>
-          </div>
-        </div>
+        
       </div>
     </div>
   </div>
-<input type="title" placeholder="1" onchange="onSearchChange(event)">
+
     </nav>
     </section>
     
     <main>
-        <form action="/search" method="GET" class="search-form">
-  <label for="site-search" class="visually-hidden">Search the site:</label>
-  <input type="search" id="site-search" name="q" placeholder="Search here..." required>
+      <section>
+        <div class="container">
+          <div class="row">
+      <div class="search-form">
+  <input type="search" id="site-search" name="q" placeholder="Search here..." required onchange="getMovie(event)"/>
   <button type="submit">Search</button>
-</form>
+  </div>
+  
     <div class="filter__wrapper">
      <select class="movie--filter" id="filter" onchange="filterMovies(event)">
         <option value disabled selected>sort</option>
         <option value="A-Z">A to Z</option>
         <option value="Z-A">Z to A</option>
         <option value="RATING">Rating</option>
+     </div>
+          </div>
+        </div>
+       
      </select>
-    </div>
+   
     </main>
 <footer>
     <div class="footer__row">
