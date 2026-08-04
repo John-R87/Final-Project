@@ -23,7 +23,7 @@ const searchInput = document.getElementById('site-search');
 const searchBtn = document.getElementById('search-btn');
 const resultsContainer = document.getElementById('results-container');
 
-searchBtn.addEventListener("search", () => {
+searchBtn.addEventListener("click", () => {
     const query = searchInput.value;
     if (query) {
         fetchSearchResults(query);
@@ -34,7 +34,7 @@ async function fetchSearchResults(query) {
     resultsContainer.innerHTML = '<p>Loading results...</p>';
 
     try {
-        const response = await fetch(`https://www.omdbapi.com/?i=tt3896198&apikey=89315988&s=${title}`);
+        const response = await fetch(`https://www.omdbapi.com/?i=tt3896198&apikey=89315988&s=${query}`);
         
         if (!response.ok) {
             throw new Error('Network response was not ok');
@@ -43,16 +43,16 @@ async function fetchSearchResults(query) {
 
         resultsContainer.innerHTML = '';
 
-        if (data.results.length === 0) {
+        if (data.Search.length === 0) {
             resultsContainer.innerHTML = '<p>No results found.</p>';
             return;
         }
 
-        data.results.forEach(item => {
+        data.Search.forEach(item => {
             const resultCard = `
                 <div class="result-card">
-                    <h3>${title}</h3>
-                    <p>${year}</p>
+                    <h3>${item.Title}</h3>
+                    <p>${item.Year}</p>
                 </div>
             `;
             resultsContainer.insertAdjacentHTML('beforeend', resultCard);
