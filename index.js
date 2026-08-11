@@ -103,3 +103,16 @@ const contactDiv = document.getElementById('contact-info');
 myButton.addEventListener('click', function() {
   contactDiv.style.display = 'block';
 });
+
+function goToTop() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+window.onscroll = function() {
+  let btn = document.getElementById("topBtn");
+  if (document.documentElement.scrollTop > 200) {
+    btn.style.display = "block";
+  } else {
+    btn.style.display = "none";
+  }
+};
