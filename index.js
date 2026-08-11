@@ -49,39 +49,40 @@ searchBtn.addEventListener("click", () => {
 });
 
 async function fetchSearchResults(query) {
-    resultsContainer.innerHTML = '<p>Loading results...</p>';
+  const searchForm = document.querySelector(".search-form");
+  searchForm.classList.add("loading");
+  resultsContainer.innerHTML = "";
 
-    try {
-        const response = await fetch(`https://www.omdbapi.com/?i=tt3896198&apikey=89315988&s=${query}`);
-        
-        if (!response.ok) {
-            throw new Error('Network response was not ok');
-        }
-        const data = await response.json();
+  try {
+    const response = await fetch(
+      `https://www.omdbapi.com/?i=tt3896198&apikey=89315988&s=${query}`
+    );
 
-        resultsContainer.innerHTML = '';
-
-        if (data.Search.length === 0) {
-            resultsContainer.innerHTML = '<p>No results found.</p>';
-            return;
-        }
-
-        movies = data.Search;
-        movies.forEach(item => {
-            const resultCard = `
-                <div class="result-card">
-                    <h3>${item.Title}</h3>
-                    <p>${item.Year}</p>
-                </div>
-            `;
-            resultsContainer.insertAdjacentHTML('beforeend', resultCard);
-        });
-
-    } catch (error) {
-        console.error('API Error:', error);
-        resultsContainer.innerHTML = '<p>Something went wrong. Please try again.</p>';
+    if (!response.ok) {
+      throw new Error("Network response was not ok");
     }
+
+    const data = await response.json();
+    resultsContainer.innerHTML = "";
+
+    if (data.Response === "False" || !data.Search) {
+      resultsContainer.innerHTML = "<p>No results found.</p>";
+      return;
+    }
+
+    movies = data.Search;
+    displayMovies(movies);
+  } catch (error) {
+    console.error("API Error:", error);
+    resultsContainer.innerHTML =
+      "<p>Something went wrong. Please try again.</p>";
+  } finally {
+    setTimeout(() => {
+    searchForm.classList.remove("loading");
+  }, 1000);
 }
+}
+
 
 function displayMovies(movieList) {
   resultsContainer.innerHTML = "";
