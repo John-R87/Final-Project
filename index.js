@@ -97,3 +97,9 @@ function displayMovies(movieList) {
         });
 }
 
+const myButton = document.getElementById('show-btn');
+const contactDiv = document.getElementById('contact-info');
+
+myButton.addEventListener('click', function() {
+  contactDiv.style.display = 'block';
+});
