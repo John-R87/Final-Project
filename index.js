@@ -13,6 +13,24 @@ async function getMovie(event) {
 }
 
 
+function sortMovies(movies, order) {
+    return movies.sort((a, b) => {
+        if (order === "A-Z") {
+            return a.Title.localeCompare(b.Title);
+        } else {
+            return b.Title.localeCompare(a.Title);
+        }
+    });
+}
+let movies = [];
+const movieFilter = document.getElementById("filter");
+
+movieFilter.addEventListener("change", (event) => {
+  const sortedMovies = sortMovies(movies, event.target.value);
+  displayMovies(sortedMovies);
+});
+
+
 
 /*
 
@@ -48,7 +66,8 @@ async function fetchSearchResults(query) {
             return;
         }
 
-        data.Search.forEach(item => {
+        movies = data.Search;
+        movies.forEach(item => {
             const resultCard = `
                 <div class="result-card">
                     <h3>${item.Title}</h3>
@@ -63,3 +82,17 @@ async function fetchSearchResults(query) {
         resultsContainer.innerHTML = '<p>Something went wrong. Please try again.</p>';
     }
 }
+
+function displayMovies(movieList) {
+  resultsContainer.innerHTML = "";
+  movieList.forEach(item => {
+      const resultCard = `
+          <div class="result-card">
+              <h3>${item.Title}</h3>
+                    <p>${item.Year}</p>
+                </div>
+            `;
+            resultsContainer.insertAdjacentHTML('beforeend', resultCard);
+        });
+}
+
