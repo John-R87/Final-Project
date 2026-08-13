@@ -90,6 +90,7 @@ function displayMovies(movieList) {
       const resultCard = `
           <div class="result-card">
               <h3>${item.Title}</h3>
+              <img src="${item.Poster}"</img>
                     <p>${item.Year}</p>
                 </div>
             `;
