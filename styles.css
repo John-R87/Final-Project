@@ -155,3 +155,35 @@ ex code
    margin: 20px auto;
    padding: 0px 40px;
 }
+
+
+@media (max-width: 768px) {
+    .nav__links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .search-form {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .filter__wrapper {
+        flex-direction: column;
+        padding: 0px 20px;
+    }
+}
+
+@media (max-width: 550px) {
+    .nav__logo--title {
+        font-size: 24px;
+    }
+
+    .nav__links {
+        font-size: 24px;
+    }
+
+    .search-form input {
+        max-width: 100%;
+    }
+}
