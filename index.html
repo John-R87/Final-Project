@@ -16,7 +16,7 @@
    <div class="nav__row">
     <div class="nav__logo">
     <div class="nav__logo--img">
-             <button onclick="location.reload();" class="link">Refresh</button>
+             
         <button id="show-btn">Show Contact Info</button>
         <div id="contact-info" style="display: none;">
   <p>Email: contact@moviefinder.com</p>
@@ -49,9 +49,11 @@
         <div class="container">
           <div class="row">
       <div class="search-form">
+        <button onclick="location.reload();" class="link">Refresh</button>
   <input  type="search" id="site-search" name="q" placeholder="Search here..." required onchange="getMovie(event)"/>
   <div class="spinner"></div>
   <button id="search-btn">Search</button>
+  
   </div>
 
     <div class="filter__wrapper">

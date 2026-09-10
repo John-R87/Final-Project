@@ -9,6 +9,8 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
+  
+  
 }
 
 .container {
@@ -16,7 +18,7 @@ body {
 }
 
 .row {
-    width: 100;
+    width: 100%;
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -24,9 +26,10 @@ body {
 .movie-title {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 20px;
     font-size: 32px;
-
+    margin: 100px;
+    
 }
 
 
@@ -38,6 +41,8 @@ body {
     align-items: center;
     justify-content: flex-end;
     color: rgb(53, 49, 49);
+    gap: 10px;
+    
     
 }
 
@@ -47,10 +52,20 @@ body {
    padding: 0 50px;
    justify-content: space-between;
    font-size: 32px;
+   
+   
 }
 
 .link {
 color: rgb(236, 21, 21);
+border-radius: 25px 25px 25px 25px;
+border: #333 solid 2px;
+background-color: rgb(214, 207, 200);
+
+}
+
+.search-form .link {
+    margin-right: 12px;
 }
 
 .search-form input {
@@ -58,6 +73,7 @@ color: rgb(236, 21, 21);
   border: 2px solid #333;
   border-radius: 25px 0 0 25px;
   padding: 8px 12px;
+  background-color: rgb(214, 207, 200);
 }
 
 .search-form {
@@ -73,6 +89,13 @@ color: rgb(236, 21, 21);
     border-radius: 0 25px 25px 0;   
     border-left: none;
     padding: 8px 16px;
+    background-color: rgb(214, 207, 200);
+}
+
+#show-btn {
+    border-radius: 25px 25px 25px 25px;
+    border: #333 solid 2px;
+    background-color: rgb(214, 207, 200);
 }
 
 .spinner {
@@ -88,6 +111,20 @@ color: rgb(236, 21, 21);
 
 .search-form.loading .spinner {
   display: block;
+}
+
+.movie--filter {
+    border-radius: 25px 25px 25px 25px;
+    border: #333 solid 2px;
+    margin: 0 20%;
+    background-color: rgb(214, 207, 200);
+     
+}
+
+#topBtn {
+    border-radius: 25px 25px 25px 25px;
+    border: #333 solid 2px;
+    background-color: rgb(214, 207, 200);
 }
 
 @keyframes spin {
