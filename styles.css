@@ -202,6 +202,21 @@ ex code
    padding: 0px 40px;
 }
 
+.search-bar {
+    display: flex;
+    width: min(100%, 500px);
+}
+
+.search-bar input {
+    flex: 1;
+    min-width: 0;
+    max-width: none;
+}
+
+#search-btn {
+    flex-shrink: 0;
+}
+
 
 @media (max-width: 768px) {
     .nav__links {
@@ -218,6 +233,7 @@ ex code
         flex-direction: column;
         padding: 0px 20px;
     }
+    
 }
 
 @media (max-width: 550px) {
