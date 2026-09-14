@@ -98,12 +98,7 @@ function displayMovies(movieList) {
         });
 }
 
-const myButton = document.getElementById('show-btn');
-const contactDiv = document.getElementById('contact-info');
 
-myButton.addEventListener('click', function() {
-  contactDiv.style.display = 'block';
-});
 
 function goToTop() {
   window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -116,4 +111,11 @@ window.onscroll = function() {
   } else {
     btn.style.display = "none";
   }
+};
+
+const showBtn = document.getElementById('show-btn');
+const contactInfo = document.getElementById('contact-info');
+
+showBtn.onclick = () => {
+  contactInfo.classList.toggle('show');
 };
