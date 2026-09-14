@@ -25,11 +25,11 @@ body {
 
 .movie-title {
     display: flex;
+    justify-content: center;
     align-items: center;
     gap: 20px;
     font-size: 32px;
-    margin: 100px;
-    
+    width: 100%;
 }
 
 
@@ -56,13 +56,7 @@ body {
    
 }
 
-.link {
-color: rgb(236, 21, 21);
-border-radius: 25px 25px 25px 25px;
-border: #333 solid 2px;
-background-color: rgb(214, 207, 200);
 
-}
 
 .search-form .link {
     margin-right: 12px;
@@ -127,6 +121,8 @@ background-color: rgb(214, 207, 200);
     background-color: rgb(214, 207, 200);
 }
 
+
+
 @keyframes spin {
   to {
     transform: rotate(360deg);
@@ -170,10 +166,18 @@ ex code
 
 #results-container {
     margin-top: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
 }
+
+.result-card img {
+    width: 100%;
+    max-width: 250px;
+    height: 350px;
+    object-fit: cover;
+}
+
 
 .result-card {
     border: 1px solid #ddd;
