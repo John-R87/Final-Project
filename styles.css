@@ -281,11 +281,14 @@ ex code
         padding: 0px 20px;
     }
 
-    .nav__logo--img {
-        flex-direction: column;
-        height: auto;
+    .movie-title {
+        font-size: 24px;
         gap: 10px;
     }
+    
+    #results-container {
+  grid-template-columns: 1fr;
+}
 
     #show-btn {
         position: static;
@@ -295,8 +298,9 @@ ex code
 }
 
 @media (max-width: 550px) {
-    .nav__logo--title {
+    .movie-title {
         font-size: 24px;
+        gap: 10px;
     }
 
     .nav__links {
@@ -306,4 +310,7 @@ ex code
     .search-form input {
         max-width: 100%;
     }
+
+       #results-container {
+  grid-template-columns: 1fr
 }
