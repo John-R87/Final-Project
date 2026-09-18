@@ -219,11 +219,14 @@ ex code
     padding: 15px;
     border-radius: 8px;
     background-color: #f9f9f9;
+    flex-direction: column;
+    align-items: center;
 }
 
 .result-card h3 {
     margin-top: 0;
     color: #333;
+    
 }
 
 #contact-info {
@@ -289,6 +292,9 @@ ex code
     #results-container {
   grid-template-columns: 1fr;
 }
+
+
+
 
     #show-btn {
         position: static;
