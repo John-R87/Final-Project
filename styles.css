@@ -55,7 +55,7 @@ body {
     color: rgb(53, 49, 49);
     gap: 10px;
     width: 100%;
-    
+    flex-direction: column-reverse;
 }
 
 .nav__links {
@@ -221,6 +221,7 @@ ex code
     background-color: #f9f9f9;
     flex-direction: column;
     align-items: center;
+    display: flex;
 }
 
 .result-card h3 {
@@ -240,6 +241,8 @@ ex code
   border: 1px solid #000000;
   border-radius: 8px;
   z-index: 1000;
+  width: 75%;
+  font-size: 24px;
 }
 
 #contact-info.show {
@@ -272,6 +275,7 @@ ex code
     .nav__links {
         flex-direction: column;
         gap: 10px;
+        display: none;
     }
 
     .search-form {
@@ -287,6 +291,7 @@ ex code
     .movie-title {
         font-size: 24px;
         gap: 10px;
+        width: 100%;
     }
     
     #results-container {
@@ -307,10 +312,12 @@ ex code
     .movie-title {
         font-size: 24px;
         gap: 10px;
+        width: 100%;
     }
 
     .nav__links {
         font-size: 24px;
+        display: none;
     }
 
     .search-form input {
@@ -319,4 +326,5 @@ ex code
 
        #results-container {
   grid-template-columns: 1fr
+}
 }
